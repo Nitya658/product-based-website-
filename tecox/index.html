@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECOX Industries - Premium Polyamide Conduit Pipes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a3e72;
+            --secondary-color: #f7941d;
+            --accent-color: #2a5298;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        .top-bar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+            position: relative;
+            z-index: 100;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            height: 80px;
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .certification-badges {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .certification-badges img {
+            height: 60px;
+            transition: var(--transition);
+        }
+        
+        .certification-badges img:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Navigation Styles */
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 40px;
+            z-index: 98;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: block;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            background-color: var(--accent-color);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover::after {
+            width: 70%;
+        }
+        
+        /* Hero Banner Carousel */
+        .banner-carousel {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            max-height: 800px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        
+        .carousel-slides {
+            display: flex;
+            height: 100%;
+            transition: transform 0.8s ease;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .carousel-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            max-width: 800px;
+            padding: 30px;
+            text-align: center;
+            width: 90%;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .banner-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            color: white;
+        }
+        
+        .banner-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            color: white;
+        }
+        
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 10;
+            padding: 0 20px;
+        }
+        
+        .carousel-btn {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+        
+        .carousel-btn:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+        }
+        
+        .carousel-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .carousel-dot.active {
+            background-color: var(--secondary-color);
+            transform: scale(1.2);
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(247, 148, 29, 0.3);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(247, 148, 29, 0.4);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #666;
+        }
+       
+        
+        /* Features Section */
+        .features {
+            background-color: white;
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--secondary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Certificate Carousel Styles */
+        .certificates {
+            background-color: #f9f9f9;
+        }
+        
+        .certificate-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin: 30px auto;
+            max-width: 1000px;
+        }
+        
+        .certificate-container h3 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        
+        .certificate-container p {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .certificate-carousel {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .cert-carousel-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .certificate-slide {
+            min-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .certificate-slide img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            transition: var(--transition);
+        }
+        
+        .certificate-slide img:hover {
+            transform: scale(1.02);
+        }
+        
+        .certificate-slide h3 {
+            color: var(--primary-color);
+            margin: 20px 0 10px;
+            font-size: 1.5rem;
+        }
+        
+        .certificate-slide p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .cert-carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .cert-carousel-dot.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+        
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255,255,255,0.8);
+            color: var(--primary-color);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+        
+        .carousel-arrow:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .carousel-arrow.prev {
+            left: 20px;
+        }
+        
+        .carousel-arrow.next {
+            right: 20px;
+        }
+        
+        /* Resources Section */
+        .resources {
+            background-color: white;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .resource-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .resource-icon {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        .resource-info {
+            padding: 30px;
+        }
+        
+        .resource-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .resource-info p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: #f9f9f9;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .contact-info-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .contact-info-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--secondary-color);
+            z-index: -1;
+            transition: var(--transition);
+        }
+        
+        .contact-info-box:hover::before {
+            width: 100%;
+            opacity: 0.1;
+        }
+        
+        .contact-info-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .contact-info-box h3 {
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .contact-info-box h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .contact-info-box p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            color: #555;
+        }
+        
+        .contact-info-box i {
+            margin-right: 15px;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            min-width: 20px;
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(247, 148, 29, 0.2);
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .form-submit-btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-column p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            transform: translateX(5px);
+            color: var(--secondary-color);
+        }
+        
+        .footer-links i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .footer-social a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-bottom p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        
+        /* Maps Section */
+        .footer-maps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .make-in-india {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .make-in-india img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+            transition: all 0.3s ease;
+        }
+        
+        .make-in-india img:hover {
+            transform: scale(1.05);
+        }
+        
+        .maps-container {
+            flex: 2;
+            min-width: 300px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .map-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+        
+        .map-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .map-card h3 {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            margin: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+        
+        .map-iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 99;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .banner-content h1 {
+                font-size: 2.3rem;
+            }
+            
+            .banner-content p {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .top-bar .container {
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .logo-container {
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .certification-badges {
+                justify-content: center;
+            }
+            
+            nav ul li a {
+                padding: 12px 15px;
+            }
+            
+            .banner-carousel {
+                height: 70vh;
+                min-height: 400px;
+            }
+            
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+            
+            .banner-content p {
+                font-size: 1rem;
+            }
+            
+            .btn-group {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .certificate-container {
+                padding: 30px 20px;
+            }
+            
+            .footer-maps {
+                flex-direction: column;
+            }
+            
+            .make-in-india {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .social-links {
+                display: none;
+            }
+            
+            .banner-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-envelope"></i> tecoxind@gmail.com</span>
+                <span><i class="fas fa-phone"></i> 9373311455 / 9923311488</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="#home"><img src="pictures/logo2.jpeg" alt="TECOX Industries Logo" class="logo"></a>
+                <div class="certification-badges">
+                    <img src="pictures/istockphoto-942287864-612x612.jpg" alt="ISO 9001:2015 Certified" title="ISO 9001:2015 Certified">
+                    <img src="pictures/3.png" alt="CE Certified" title="CE Certified">
+                    <img src="pictures/2.jpg" alt="RoHS Compliant" title="RoHS Compliant">
+                    <img src="pictures/655-6554972_fr-flame-retardant-logo-hd-png-download.png" alt="Flame Retardant" title="Flame Retardant">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Banner Carousel -->
+    <section id="home" class="banner-carousel">
+        <div class="carousel-slides">
+            <div class="carousel-slide" style="background-image: url('pictures/FACTORY.png')">
+                <div class="banner-content">
+                    <h1>Premium Polyamide Conduit Pipes</h1>
+                    <p>High-quality, fire-retardant, and environmentally friendly products for industrial and commercial applications</p>
+                    <div class="btn-group">
+                        <a href="product.html" class="btn">Explore Products</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image: url('pictures/OPEN\ TYPE..jpg')">
+            </div>
+
+            <div class="carousel-slide" style="background-image: url('pictures/nyloncable.jpg')">
+            </div>
+        </div>
+        
+        <div class="carousel-controls">
+            <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <div class="carousel-dots">
+            <div class="carousel-dot active" data-index="0"></div>
+            <div class="carousel-dot" data-index="1"></div>
+            <div class="carousel-dot" data-index="2"></div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose TECOX?</h2>
+                <p>We are committed to delivering excellence in every product we manufacture</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Quality Certified</h3>
+                    <p>ISO 9001:2015, CE, and RoHS certified products ensuring highest quality standards</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Advanced Manufacturing</h3>
+                    <p>State-of-the-art manufacturing facility with latest technology and equipment</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>R&D Focus</h3>
+                    <p>Continuous research and development to innovate and improve products</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Support</h3>
+                    <p>Dedicated customer service team for pre and post-sales support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Certifications</h2>
+                <p>Recognized for quality and compliance with international standards</p>
+            </div>
+            
+            <div class="certificate-container">
+                <h3>Quality Certifications</h3>
+                <p>TECOX Industries is committed to maintaining the highest quality standards in all our products. We are proud to hold the following certifications:</p>
+                
+                <!-- Certificate Carousel -->
+                <div class="certificate-carousel">
+                    <button class="carousel-arrow prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-arrow next"><i class="fas fa-chevron-right"></i></button>
+                    
+                    <div class="cert-carousel-container">
+                        <div class="certificate-slide">
+                            <img src="cert/REG_CERT.jpeg" alt="ISO 9001:2015 Certificate">
+                            <h3>ISO 9001:2015</h3>
+                            <p>Certified for Quality Management Systems, demonstrating our commitment to consistent quality and customer satisfaction.</p>
+                        </div>
+                        <div class="certificate-slide">
+                            <img src="cert/COMPLIANCE_CERT.jpeg" alt="CE Certificate">
+                            <h3>CE Marking</h3>
+                            <p>Our products comply with European health, safety, and environmental protection standards.</p>
+                        </div>
+                        <div class="certificate-slide">
+                            <img src="cert/ROHS_CERT.jpeg" alt="RoHS Certificate">
+                            <h3>RoHS Compliance</h3>
+                            <p>Restriction of Hazardous Substances directive compliance, ensuring our products are environmentally friendly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-nav">
+                        <div class="cert-carousel-dot active"></div>
+                        <div class="cert-carousel-dot"></div>
+                        <div class="cert-carousel-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resources</h2>
+                <p>Our product catalog and technical documents</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="resource-info">
+                        <h3>Product Catalog</h3>
+                        <p>Our complete product catalog with detailed technical specifications and product range.</p>
+                        <a href="files/TECOX.pdf" class="btn">Catalog</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="resource-info">
+                        <h3>Test Reports</h3>
+                        <div class="test-reports">
+                            <ul class="list">
+                                <li><a href="cert/POLYAMIDE PIPE TEMPERATURE TEST REPORT.PNG" class="btn">Temperature Test</a></li>
+                                <br>
+                                <li><a href="cert/UL94 FR POLYPROPYLENE NABL TEST REPORT.PNG" class="btn">Polypropylene Test</a></li>
+                                <br>
+                                <li><a href="cert/UL94 FR POLYAMIDE NABL TEST REPORT.PNG" class="btn">Polyamide Test</a></li>
+                                <br>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for inquiries and support</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-box">
+                    <h3>Company Address</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Plot no. 1205, Near IIBM college, Sonwane Wasti Road, Chikhali, Pune-412114</p>
+                    <p><i class="fas fa-envelope"></i> tecoxind@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 9373311455 / 9923311488</p>
+                    <p><i class="fas fa-globe"></i> www.tecox.in, www.tecox.co.in</p>
+                </div>
+                <div class="contact-info-box">
+                    <h3>Sales Office</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Shop No-1, PAP J -154, Yogiraj Palace, Telco Road, Behind Quality Circle, MIDC, Bhosari, Pune, Maharashtra 411026</p>
+                    <p><i class="fas fa-envelope"></i> tecoxind@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 9373311455 / 9923311488</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="product.html">Products</a>
+                <a href="certificates.html">Certificates</a>
+                <a href="#resources">Resources</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            
+            <!-- Maps Section -->
+            <div class="footer-maps">
+                <div class="make-in-india">
+                    <img src="pictures/makeinindia.png" alt="Make in India Logo">
+                </div>
+                <div class="maps-container">
+                    <div class="map-card">
+                        <h3>Company Address</h3>
+                        <iframe src="https://www.google.com/maps?q=Plot+no.+1205,+Near+IIBM+college,+Sonwane+Wasti+Road,+Chikhali,+Pune-412114&output=embed" 
+                                class="map-iframe" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="map-card">
+                        <h3>Sales Office</h3>
+                        <iframe src="https://www.google.com/maps?q=Shop+No-1,+PAP+J+-154,+Yogiraj+Palace,+Telco+Road,+Behind+Quality+Circle,+MIDC,+Bhosari,+Pune,+Maharashtra+411026&output=embed" 
+                                class="map-iframe" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 TECOX Industries. All Rights Reserved.</p>
+                <p>ISO 9001:2015 Certified</p>
+                <p>Designed & Developed by Mywebz Developers</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <script>
+        // Hero Banner Carousel Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hero carousel
+            const heroCarousel = document.querySelector('.carousel-slides');
+            const heroSlides = document.querySelectorAll('.carousel-slide');
+            const heroDots = document.querySelectorAll('.carousel-dot');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentSlide = 0;
+            const slideCount = heroSlides.length;
+            
+            function updateHeroCarousel() {
+                heroCarousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update dots
+                heroDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+            
+            function nextHeroSlide() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                updateHeroCarousel();
+            }
+            
+            function prevHeroSlide() {
+                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                updateHeroCarousel();
+            }
+            
+            // Button events
+            nextBtn.addEventListener('click', nextHeroSlide);
+            prevBtn.addEventListener('click', prevHeroSlide);
+            
+            // Dot navigation
+            heroDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateHeroCarousel();
+                });
+            });
+            
+            // Auto-rotate every 5 seconds
+            let autoRotate = setInterval(nextHeroSlide, 5000);
+            
+            // Pause on hover
+            const heroContainer = document.querySelector('.banner-carousel');
+            heroContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoRotate);
+            });
+            
+            heroContainer.addEventListener('mouseleave', () => {
+                autoRotate = setInterval(nextHeroSlide, 5000);
+            });
+            
+            // Certificate Carousel Functionality
+            const certCarousel = document.querySelector('.cert-carousel-container');
+            const certSlides = document.querySelectorAll('.certificate-slide');
+            const certDots = document.querySelectorAll('.cert-carousel-dot');
+            const certPrevBtn = document.querySelector('.certificate-carousel .prev');
+            const certNextBtn = document.querySelector('.certificate-carousel .next');
+            let currentCertSlide = 0;
+            const certSlideCount = certSlides.length;
+            
+            function updateCertCarousel() {
+                certCarousel.style.transform = `translateX(-${currentCertSlide * 100}%)`;
+                
+                // Update dots
+                certDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentCertSlide);
+                });
+            }
+            
+            function nextCertSlide() {
+                currentCertSlide = (currentCertSlide + 1) % certSlideCount;
+                updateCertCarousel();
+            }
+            
+            function prevCertSlide() {
+                currentCertSlide = (currentCertSlide - 1 + certSlideCount) % certSlideCount;
+                updateCertCarousel();
+            }
+            
+            // Button events
+            certNextBtn.addEventListener('click', nextCertSlide);
+            certPrevBtn.addEventListener('click', prevCertSlide);
+            
+            // Dot navigation
+            certDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentCertSlide = index;
+                    updateCertCarousel();
+                });
+            });
+            
+            // Auto-rotate (optional)
+            let certAutoRotate = setInterval(nextCertSlide, 5000);
+            
+            // Pause on hover
+            const certContainer = document.querySelector('.certificate-carousel');
+            certContainer.addEventListener('mouseenter', () => {
+                clearInterval(certAutoRotate);
+            });
+            
+            certContainer.addEventListener('mouseleave', () => {
+                certAutoRotate = setInterval(nextCertSlide, 5000);
+            });
+            
+            // Back to Top Button
+            const backToTopButton = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('active');
+                } else {
+                    backToTopButton.classList.remove('active');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Right-click disable
+            document.addEventListener('contextmenu', (e) => e.preventDefault());
+            
+            // Screenshot key disable
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'PrintScreen' || (e.ctrlKey && e.shiftKey && e.key === 'S')) {
+                    e.preventDefault();
+                    alert('Screenshots are disabled on this page.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
